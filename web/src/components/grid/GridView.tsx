@@ -1,12 +1,7 @@
-import { ITrackDataProps } from "@/types/track.types";
-import { TrackBox } from "./TrackBox";
-
-export const GridView = ({
-    track,
-    index,
-}: {
-    track: ITrackDataProps;
-    index: number;
-}) => {
-    return <TrackBox track={track} index={index} />;
+export const GridView = ({ children }: React.PropsWithChildren) => {
+    return (
+        <div className="flex min-h-screen flex-col">
+            <div className="flex flex-wrap justify-center">{children}</div>
+        </div>
+    );
 };

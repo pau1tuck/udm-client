@@ -1,5 +1,6 @@
 "use client";
 import { GridView } from "@/components/grid/GridView";
+import { TrackBox } from "@/components/grid/TrackBox";
 import { TrackRowLg } from "@/components/list/lg/TrackRowLg";
 import { getTrackData } from "@/utils/get-track-data";
 import { GlobalStateContext, ViewMode } from "@/utils/global-state-context";
@@ -12,21 +13,18 @@ export default function Page() {
     if (!viewMode) {
         return null;
     }
-    const trackComponent = trackData.map((track, index) => {
-        return viewMode === ViewMode.GRID ? (
-            <GridView key={index} track={track} index={index} />
-        ) : (
-            <TrackRowLg key={index} track={track} index={index} />
-        );
-    });
 
-    return viewMode === ViewMode.GRID ? (
-        <div className="flex min-h-screen flex-col">
-            <div className="flex flex-wrap justify-center">
-                {trackComponent}
-            </div>
-        </div>
-    ) : (
-        <div>{trackComponent}</div>
-    );
+    if (viewMode === ViewMode.GRID) {
+        const latestTracks = trackData.map((track, index) => {
+            return <TrackBox key={index} track={track} index={index} />;
+        });
+        return <GridView>{latestTracks}</GridView>;
+    }
+
+    if (viewMode === ViewMode.LIST) {
+        const latestTracks = trackData.map((track, index) => {
+            return <TrackRowLg key={index} track={track} index={index} />;
+        });
+        return <div>{latestTracks}</div>; //? return <ListView>{latestTracks}</ListView> (sorts by media size)
+    }
 }
