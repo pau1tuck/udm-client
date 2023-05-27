@@ -1,7 +1,8 @@
 "use client";
 import { GridView } from "@/components/grid/GridView";
 import { TrackBox } from "@/components/grid/TrackBox";
-import { TrackRowLg } from "@/components/list/lg/TrackRowLg";
+import { ListView } from "@/components/list/ListView";
+import { TrackRow } from "@/components/list/TrackRow";
 import { getTrackData } from "@/utils/get-track-data";
 import { GlobalStateContext, ViewMode } from "@/utils/global-state-context";
 import { useContext } from "react";
@@ -23,8 +24,8 @@ export default function Page() {
 
     if (viewMode === ViewMode.LIST) {
         const latestTracks = trackData.map((track, index) => {
-            return <TrackRowLg key={index} track={track} index={index} />;
+            return <TrackRow key={index} track={track} index={index} />;
         });
-        return <div>{latestTracks}</div>; //? return <TrackRow>{latestTracks}</TrackRow> (sorts by media size)
+        return <ListView>{latestTracks}</ListView>; //? return <TrackRow>{latestTracks}</TrackRow> (sorts by media size)
     }
 }
