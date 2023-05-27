@@ -1,4 +1,5 @@
-import React, { ReactNode, createContext, useContext, useReducer } from "react";
+"use client";
+import { ReactNode, createContext, useContext, useReducer } from "react";
 
 export enum ViewMode {
     GRID = "grid",
@@ -22,8 +23,10 @@ const initialState: GlobalState = {
     trackId: "",
 };
 
-const GlobalStateContext = createContext<GlobalState | undefined>(undefined);
-const GlobalDispatchContext = createContext<
+export const GlobalStateContext = createContext<GlobalState | undefined>(
+    undefined
+);
+export const GlobalDispatchContext = createContext<
     React.Dispatch<GlobalStateAction> | undefined
 >(undefined);
 
@@ -63,7 +66,7 @@ interface GlobalStateProviderProps {
     children: ReactNode;
 }
 
-const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
+export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
     const [state, dispatch] = useReducer(globalStateReducer, initialState);
 
     const toggleViewMode = () => {
@@ -87,7 +90,7 @@ const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
     );
 };
 
-const useGlobalState = (): GlobalState => {
+export const useGlobalState = (): GlobalState => {
     const context = useContext(GlobalStateContext);
     if (context === undefined) {
         throw new Error(
@@ -97,7 +100,7 @@ const useGlobalState = (): GlobalState => {
     return context;
 };
 
-const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
+export const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
     const context = useContext(GlobalDispatchContext);
     if (context === undefined) {
         throw new Error(
@@ -106,5 +109,3 @@ const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
     }
     return context;
 };
-
-export { GlobalStateProvider, useGlobalDispatch, useGlobalState };
