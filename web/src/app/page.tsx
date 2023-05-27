@@ -25,6 +25,6 @@ export default function Page() {
         const latestTracks = trackData.map((track, index) => {
             return <TrackRowLg key={index} track={track} index={index} />;
         });
-        return <div>{latestTracks}</div>; //? return <ListView>{latestTracks}</ListView> (sorts by media size)
+        return <div>{latestTracks}</div>; //? return <TrackRow>{latestTracks}</TrackRow> (sorts by media size)
     }
 }
