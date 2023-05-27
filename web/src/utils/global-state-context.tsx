@@ -102,13 +102,15 @@ export const useGlobalState = (): GlobalState => {
 };
 
 export const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
-    const context = useContext(GlobalDispatchContext);
-    if (context === undefined) {
+    const dispatch = useContext(GlobalDispatchContext);
+
+    if (!dispatch) {
         throw new Error(
             "useGlobalDispatch must be used within a GlobalStateProvider"
         );
     }
-    return context;
+
+    return dispatch;
 };
 
 export const setTrack = (currentTrack: ITrackData) => {
