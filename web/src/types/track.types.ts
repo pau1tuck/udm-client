@@ -22,7 +22,7 @@ export type ITracks = {
     tracks: ITrack[];
 };
 
-export interface ITrackDataProps {
+export interface ITrackData {
     index?: number;
     trackId?: string;
     artist?: string;
@@ -38,8 +38,12 @@ export interface ITrackDataProps {
     updatedAt?: string;
 }
 
+export interface ITrackDataProps {
+    track?: ITrackData;
+}
+
 export interface ITrackRowDataProps {
-    track?: ITrackDataProps;
+    track?: ITrackData;
     number: React.ReactNode;
     image: React.ReactNode;
     titleArtist: React.ReactNode;

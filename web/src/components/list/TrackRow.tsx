@@ -1,11 +1,11 @@
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 import TrackRowLg from "./lg/TrackRowLg";
 
 export const TrackRow = ({
     track,
     index,
 }: {
-    track: ITrackDataProps;
+    track: ITrackData;
     index: number;
 }) => {
     return (

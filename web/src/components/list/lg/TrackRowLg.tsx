@@ -3,7 +3,7 @@ import { TrackDuration } from "@/components/track/TrackDuration";
 import { TrackImage } from "@/components/track/TrackImage";
 import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 
 const listLgColumnWidths = "grid-cols-[50px,128px,1fr,225px,210px,75px]";
 
@@ -11,7 +11,7 @@ export const TrackRowLg = ({
     track,
     index,
 }: {
-    track: ITrackDataProps;
+    track: ITrackData;
     index: number;
 }) => {
     return (

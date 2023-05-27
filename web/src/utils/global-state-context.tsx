@@ -1,5 +1,5 @@
 "use client";
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 import { ReactNode, createContext, useContext, useReducer } from "react";
 
 export enum ViewMode {
@@ -9,19 +9,19 @@ export enum ViewMode {
 
 export interface GlobalState {
     viewMode: ViewMode;
-    nowPlaying: boolean;
-    track: ITrackDataProps;
+    isNowPlaying: boolean;
+    currentTrack: ITrackData;
 }
 
 export interface GlobalStateAction {
-    type: "TOGGLE_VIEW_MODE" | "SET_NOW_PLAYING" | "SET_TRACK";
+    type: "TOGGLE_VIEW_MODE" | "TOGGLE_NOW_PLAYING" | "SET_TRACK";
     payload?: any;
 }
 
 const initialState: GlobalState = {
     viewMode: ViewMode.GRID,
-    nowPlaying: false,
-    track: {},
+    isNowPlaying: false,
+    currentTrack: {},
 };
 
 export const GlobalStateContext = createContext<GlobalState | undefined>(
@@ -46,15 +46,15 @@ const globalStateReducer = (
                         ? ViewMode.LIST
                         : ViewMode.GRID,
             };
-        case "SET_NOW_PLAYING":
+        case "TOGGLE_NOW_PLAYING":
             return {
                 ...state,
-                nowPlaying: action.payload,
+                isNowPlaying: !state.isNowPlaying,
             };
         case "SET_TRACK":
             return {
                 ...state,
-                track: action.payload,
+                currentTrack: action.payload,
             };
         default:
             return state;
@@ -74,11 +74,11 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
         dispatch({ type: "TOGGLE_VIEW_MODE" });
     };
 
-    const setNowPlaying = (value: boolean) => {
-        dispatch({ type: "SET_NOW_PLAYING", payload: value });
+    const toggleNowPlaying = () => {
+        dispatch({ type: "TOGGLE_NOW_PLAYING" });
     };
 
-    const setTrack = (currentTrack: ITrackDataProps) => {
+    const setTrack = (currentTrack: ITrackData) => {
         dispatch({ type: "SET_TRACK", payload: currentTrack });
     };
 
@@ -109,4 +109,14 @@ export const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
         );
     }
     return context;
+};
+
+export const setTrack = (currentTrack: ITrackData) => {
+    const dispatch = useGlobalDispatch();
+    dispatch({ type: "SET_TRACK", payload: currentTrack });
+};
+
+export const toggleNowPlaying = () => {
+    const dispatch = useGlobalDispatch();
+    dispatch({ type: "TOGGLE_NOW_PLAYING" });
 };
