@@ -1,4 +1,5 @@
 "use client";
+import { ITrackDataProps } from "@/types/track.types";
 import { ReactNode, createContext, useContext, useReducer } from "react";
 
 export enum ViewMode {
@@ -9,18 +10,18 @@ export enum ViewMode {
 export interface GlobalState {
     viewMode: ViewMode;
     nowPlaying: boolean;
-    trackId: string;
+    track: ITrackDataProps;
 }
 
 export interface GlobalStateAction {
-    type: "TOGGLE_VIEW_MODE" | "SET_NOW_PLAYING" | "SET_TRACK_ID";
+    type: "TOGGLE_VIEW_MODE" | "SET_NOW_PLAYING" | "SET_TRACK";
     payload?: any;
 }
 
 const initialState: GlobalState = {
     viewMode: ViewMode.GRID,
     nowPlaying: false,
-    trackId: "",
+    track: {},
 };
 
 export const GlobalStateContext = createContext<GlobalState | undefined>(
@@ -50,10 +51,10 @@ const globalStateReducer = (
                 ...state,
                 nowPlaying: action.payload,
             };
-        case "SET_TRACK_ID":
+        case "SET_TRACK":
             return {
                 ...state,
-                trackId: action.payload,
+                track: action.payload,
             };
         default:
             return state;
@@ -77,8 +78,8 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
         dispatch({ type: "SET_NOW_PLAYING", payload: value });
     };
 
-    const setTrackId = (id: string) => {
-        dispatch({ type: "SET_TRACK_ID", payload: id });
+    const setTrack = (currentTrack: ITrackDataProps) => {
+        dispatch({ type: "SET_TRACK", payload: currentTrack });
     };
 
     return (

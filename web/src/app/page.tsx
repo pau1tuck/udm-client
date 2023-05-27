@@ -7,6 +7,7 @@ import { getTrackData } from "@/utils/get-track-data";
 import { GlobalStateContext, ViewMode } from "@/utils/global-state-context";
 import { useContext } from "react";
 
+// * Main Index View *
 export default function Page() {
     const { viewMode } = useContext(GlobalStateContext) || {};
     const trackData = getTrackData();
@@ -26,6 +27,6 @@ export default function Page() {
         const latestTracks = trackData.map((track, index) => {
             return <TrackRow key={index} track={track} index={index} />;
         });
-        return <ListView>{latestTracks}</ListView>; //? return <TrackRow>{latestTracks}</TrackRow> (sorts by media size)
+        return <ListView>{latestTracks}</ListView>;
     }
 }
