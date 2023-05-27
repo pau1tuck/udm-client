@@ -8,11 +8,5 @@ export const GridView = ({
     track: ITrackDataProps;
     index: number;
 }) => {
-    return (
-        <div className="flex min-h-screen flex-col">
-            <div className="flex flex-wrap justify-center">
-                <TrackBox track={track} index={index} />
-            </div>
-        </div>
-    );
+    return <TrackBox track={track} index={index} />;
 };

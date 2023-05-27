@@ -19,5 +19,14 @@ export default function Page() {
             <TrackRowLg key={index} track={track} index={index} />
         );
     });
-    return <div>{trackComponent}</div>;
+
+    return viewMode === ViewMode.GRID ? (
+        <div className="flex min-h-screen flex-col">
+            <div className="flex flex-wrap justify-center">
+                {trackComponent}
+            </div>
+        </div>
+    ) : (
+        <div>{trackComponent}</div>
+    );
 }
