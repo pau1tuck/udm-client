@@ -1,5 +1,5 @@
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 
-export const TrackArtist = ({ artist }: ITrackDataProps) => {
+export const TrackArtist = ({ artist }: ITrackData) => {
     return <span>{artist}</span>;
 };

@@ -1,5 +1,5 @@
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 
-export const TrackLabel = ({ label }: ITrackDataProps) => {
+export const TrackLabel = ({ label }: ITrackData) => {
     return <span>{label}</span>;
 };

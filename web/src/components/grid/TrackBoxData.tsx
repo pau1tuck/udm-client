@@ -2,13 +2,13 @@ import { TrackArtist } from "@/components/track/TrackArtist";
 import { TrackLabel } from "@/components/track/TrackLabel";
 import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 
 export const TrackBoxData = ({
     track,
     index,
 }: {
-    track: ITrackDataProps;
+    track: ITrackData;
     index: number;
 }) => {
     return (

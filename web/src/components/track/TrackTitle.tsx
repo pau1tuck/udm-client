@@ -1,5 +1,5 @@
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 
-export const TrackTitle = ({ title }: ITrackDataProps) => {
+export const TrackTitle = ({ title }: ITrackData) => {
     return <span>{title}</span>;
 };

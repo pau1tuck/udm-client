@@ -1,4 +1,4 @@
-import { ITrackDataProps } from "@/types/track.types";
+import { ITrackData } from "@/types/track.types";
 import { TrackBoxData } from "./TrackBoxData";
 import { TrackBoxImage } from "./TrackBoxImage";
 
@@ -6,7 +6,7 @@ export const TrackBox = ({
     track,
     index,
 }: {
-    track: ITrackDataProps;
+    track: ITrackData;
     index: number;
 }) => {
     return (
