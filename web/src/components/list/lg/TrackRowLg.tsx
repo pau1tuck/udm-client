@@ -7,7 +7,13 @@ import { ITrackDataProps } from "@/types/track.types";
 
 const listLgColumnWidths = "grid-cols-[50px,128px,1fr,225px,210px,75px]";
 
-const TrackRowLg = (index: number, track: ITrackDataProps) => {
+export const TrackRowLg = ({
+    track,
+    index,
+}: {
+    track: ITrackDataProps;
+    index: number;
+}) => {
     return (
         <div className="max-w-1280 mx-auto mb-2">
             <div

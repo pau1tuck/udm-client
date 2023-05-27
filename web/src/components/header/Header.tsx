@@ -1,5 +1,6 @@
 import { Logo } from "@/components/header/Logo";
 import { Title } from "@/components/header/Title";
+import { ViewModeButton } from "@/components/header/ViewModeButton";
 import { TagLine } from "./TagLine";
 
 export const Header = () => {
@@ -10,13 +11,13 @@ export const Header = () => {
                 <Title />
             </div>
             <div>
-                <div className="flex flex-col mb-6">
+                <div className="flex flex-col mb-5">
                     <div className="flex justify-between items-center">
-                        <div className="ml-[75px] lg:ml-[90px]">
+                        <div className="ml-[75px] lg:ml-[90px] font-cursive text-tertiary">
                             <TagLine />
                         </div>
-                        <div>
-                            <span>X</span>
+                        <div className="lg:mr-[90px] text-4xl text-gray-500">
+                            <ViewModeButton />
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,16 @@
-import { ITrackProps } from "@/types/track.types";
-import { TrackTitle } from "@/components/track/TrackTitle";
-import { TrackVersion } from "@/components/track/TrackVersion";
 import { TrackArtist } from "@/components/track/TrackArtist";
 import { TrackLabel } from "@/components/track/TrackLabel";
+import { TrackTitle } from "@/components/track/TrackTitle";
+import { TrackVersion } from "@/components/track/TrackVersion";
+import { ITrackDataProps } from "@/types/track.types";
 
-export const TrackBoxData = ({ track }: ITrackProps) => {
+export const TrackBoxData = ({
+    track,
+    index,
+}: {
+    track: ITrackDataProps;
+    index: number;
+}) => {
     return (
         <div className="mt-5 font-cursive text-center text-white">
             <div className="mt-2 rounded-md">

@@ -23,6 +23,7 @@ export type ITracks = {
 };
 
 export interface ITrackDataProps {
+    index?: number;
     trackId?: string;
     artist?: string;
     title?: string;

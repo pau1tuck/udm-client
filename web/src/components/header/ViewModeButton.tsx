@@ -1,3 +1,4 @@
+"use client";
 import {
     GlobalDispatchContext,
     GlobalStateContext,
@@ -7,7 +8,7 @@ import { useContext } from "react";
 import { FaList } from "react-icons/fa";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 
-const YourComponent = () => {
+export const ViewModeButton = () => {
     const state = useContext(GlobalStateContext);
     const dispatch = useContext(GlobalDispatchContext);
 
@@ -28,17 +29,13 @@ const YourComponent = () => {
 
     return (
         <div>
-            <button
-                onClick={toggleViewMode}
-                className="cursor-pointer text-4xl text-gray-500"
-            >
+            <button onClick={toggleViewMode} className="cursor-pointer">
                 {viewMode === ViewMode.GRID ? (
                     <FaList />
                 ) : (
                     <TfiLayoutGrid2Alt />
                 )}
             </button>
-            <p>Current View Mode: {viewMode}</p>
         </div>
     );
 };

@@ -7,5 +7,5 @@ export const TagLine = () => {
 
     const text = useTypewriterEffect(tagline, speed, null);
 
-    return <div className="font-cursive text-tertiary">{text}</div>;
+    return <div>{text}</div>;
 };
