@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Logo: React.FC = () => {
+export const Logo = () => {
     return (
         <div className="flex items-center">
             <Image

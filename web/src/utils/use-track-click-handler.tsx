@@ -1,8 +1,8 @@
-// trackClickHandler.ts
+"use client";
 import { useGlobalDispatch, useGlobalState } from "@/config/global-state";
 import { ITrackData } from "@/types/track.types";
 
-export const handleTrackClick = (track: ITrackData) => {
+export const useTrackClickHandler = () => {
     const { isNowPlaying, currentTrack } = useGlobalState(); // State variables
     const dispatch = useGlobalDispatch(); // Reducer dispatch function
 
@@ -14,22 +14,24 @@ export const handleTrackClick = (track: ITrackData) => {
         dispatch({ type: "TOGGLE_NOW_PLAYING" });
     };
 
-    if (track?.trackId) {
-        if (isNowPlaying && track.trackId === currentTrack.trackId) {
-            toggleNowPlaying();
-        } else {
-            setTrack(track);
-            if (!isNowPlaying) {
+    return (track: ITrackData) => {
+        if (track?.trackId) {
+            if (isNowPlaying && track.trackId === currentTrack.trackId) {
                 toggleNowPlaying();
+            } else {
+                setTrack(track);
+                if (!isNowPlaying) {
+                    toggleNowPlaying();
+                }
             }
         }
-    }
-    console.log(
-        "Current: ",
-        currentTrack,
-        "IsPlaying?",
-        isNowPlaying,
-        "New track: ",
-        track
-    );
+        console.log(
+            "Current: ",
+            currentTrack,
+            "IsPlaying?",
+            isNowPlaying,
+            "New track: ",
+            track
+        );
+    };
 };
