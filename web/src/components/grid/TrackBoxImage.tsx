@@ -18,7 +18,7 @@ export const TrackBoxImage = ({ track }: { track: ITrackData }) => {
         dispatch({ type: "TOGGLE_NOW_PLAYING" });
     };
 
-    const handleImageClick = () => {
+    const handleTrackClick = () => {
         if (track?.trackId) {
             if (isNowPlaying && track.trackId === currentTrack.trackId) {
                 // If the clicked track is already playing, set isNowPlaying to false
@@ -43,7 +43,7 @@ export const TrackBoxImage = ({ track }: { track: ITrackData }) => {
 
     return (
         <div
-            onClick={handleImageClick}
+            onClick={handleTrackClick}
             className="w-60 h-32 mt-2 rounded-md cursor-pointer bg-black"
         >
             <TrackImage trackId={track.trackId} width={320} height={180} />
