@@ -23,7 +23,7 @@ export default function Page() {
         });
         return (
             <>
-                <ViewModeController grid={viewMode === ViewMode.GRID} />
+                <ViewModeController grid={true} />
                 <GridView>{latestTracks}</GridView>
             </>
         );
@@ -33,6 +33,11 @@ export default function Page() {
         const latestTracks = trackData.map((track, index) => {
             return <TrackRow key={index} track={track} index={index + 1} />;
         });
-        return <ListView>{latestTracks}</ListView>;
+        return (
+            <>
+                <ViewModeController grid={false} />
+                <ListView>{latestTracks}</ListView>;
+            </>
+        );
     }
 }
