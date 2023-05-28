@@ -17,21 +17,21 @@ export const TrackRowLg = ({
     return (
         <div className="max-w-1280 mx-auto mb-2">
             <div
-                className="grid gap-0 w-full font-body font-bold bg-customGray text-gray-500"
+                className="grid w-full gap-0 bg-customGray font-body font-bold text-gray-500"
                 style={{ gridTemplateRows: "auto auto" }}
             >
                 <div
-                    className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listLgColumnWidths}`}
+                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listLgColumnWidths} font-base text-sm`}
                 >
                     <div
                         id="index"
-                        className="inline-flex mr-3 items-center justify-center  text-xl"
+                        className="mr-3 inline-flex items-center justify-center"
                     >
                         {index}
                     </div>
                     <div
                         id="image"
-                        className="inline-flex w-[128px] h-[72px] items-center cursor-pointer"
+                        className="inline-flex h-[72px] w-[128px] cursor-pointer items-center"
                     >
                         <TrackImage //? change to TrackRowImage (with onClick event)
                             trackId={track.trackId}
@@ -41,18 +41,20 @@ export const TrackRowLg = ({
                     </div>
                     <div
                         id="title-artist"
-                        className="inline-flex pl-10 items-center"
+                        className="inline-flex items-center pl-10"
                     >
                         <div className="flex flex-col">
-                            <span>
-                                <TrackTitle title={track.title} />
-                            </span>
-                            {track.version && (
-                                <span>
-                                    &nbsp; &nbsp;
-                                    <TrackVersion version={track.version} />
+                            <p>
+                                <span className="text-white">
+                                    <TrackTitle title={track.title} />
                                 </span>
-                            )}
+                                {track.version && (
+                                    <span className="text-tertiary">
+                                        &nbsp;
+                                        <TrackVersion version={track.version} />
+                                    </span>
+                                )}
+                            </p>
                             <span className="text-secondary">
                                 <TrackArtist artist={track.artist} />
                             </span>
@@ -60,14 +62,14 @@ export const TrackRowLg = ({
                     </div>
                     <div
                         id="label"
-                        className="hidden lg:inline-flex items-center pl-2 text-pink-700"
+                        className="hidden items-center pl-2 text-pink-700 lg:inline-flex"
                     >
                         {track.label}
                     </div>
                     <div id="controls" className="flex items-center">
                         "CONTROLS"
                     </div>
-                    <div className="inline-flex items-center justify-center pr-6 text-base color-gray-600">
+                    <div className="color-gray-600 inline-flex items-center justify-center pr-6">
                         <TrackDuration duration={track.duration} />
                     </div>
                 </div>

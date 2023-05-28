@@ -18,7 +18,7 @@ export const TrackBox = ({
                 onClick={() => handleTrackClick(track)}
                 className="m-1 mb-10 ml-3 mr-3 flex h-72 w-64 cursor-pointer flex-col items-center justify-start rounded-md bg-customGray"
             >
-                <TrackBoxImage track={track} />
+                <TrackBoxImage trackId={track.trackId} />
                 <TrackBoxData track={track} index={index} />
             </div>
         </div>

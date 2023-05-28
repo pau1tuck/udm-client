@@ -18,14 +18,14 @@ export default function Page() {
 
     if (viewMode === ViewMode.GRID) {
         const latestTracks = trackData.map((track, index) => {
-            return <TrackBox key={index} track={track} index={index} />;
+            return <TrackBox key={index} track={track} index={index + 1} />;
         });
         return <GridView>{latestTracks}</GridView>;
     }
 
     if (viewMode === ViewMode.LIST) {
         const latestTracks = trackData.map((track, index) => {
-            return <TrackRow key={index} track={track} index={index} />;
+            return <TrackRow key={index} track={track} index={index + 1} />;
         });
         return <ListView>{latestTracks}</ListView>;
     }
