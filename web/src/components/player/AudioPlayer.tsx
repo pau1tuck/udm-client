@@ -1,4 +1,4 @@
-import { GlobalStateContext } from "@/utils/global-state-context";
+import { GlobalStateContext } from "@/config/global-state";
 import { useContext, useRef } from "react";
 import ReactPlayer from "react-player";
 

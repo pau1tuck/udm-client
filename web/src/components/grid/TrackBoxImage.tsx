@@ -1,10 +1,7 @@
 "use client";
 import { TrackImage } from "@/components/track/TrackImage";
+import { useGlobalDispatch, useGlobalState } from "@/config/global-state";
 import { ITrackData } from "@/types/track.types";
-import {
-    useGlobalDispatch,
-    useGlobalState,
-} from "@/utils/global-state-context";
 
 export const TrackBoxImage = ({ track }: { track: ITrackData }) => {
     const { isNowPlaying, currentTrack } = useGlobalState(); // State variables

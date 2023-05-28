@@ -3,8 +3,8 @@ import { GridView } from "@/components/grid/GridView";
 import { TrackBox } from "@/components/grid/TrackBox";
 import { ListView } from "@/components/list/ListView";
 import { TrackRow } from "@/components/list/TrackRow";
+import { GlobalStateContext, ViewMode } from "@/config/global-state";
 import { getTrackData } from "@/utils/get-track-data";
-import { GlobalStateContext, ViewMode } from "@/utils/global-state-context";
 import { useContext } from "react";
 
 // * Main Index View *

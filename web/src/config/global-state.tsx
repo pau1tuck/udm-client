@@ -1,41 +1,128 @@
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import { ITrackData } from "@/types/track.types";
+import { ReactNode, createContext, useContext, useReducer } from "react";
 
-interface GlobalStateContextProps {
-    nowPlaying: boolean;
-    setNowPlaying: (value: boolean) => void;
-    trackId: string;
-    setTrackId: (value: string) => void;
+export enum ViewMode {
+    GRID = "grid",
+    LIST = "list",
 }
 
-const GlobalStateContext = createContext<GlobalStateContextProps>({
-    nowPlaying: false,
-    setNowPlaying: () => {},
-    trackId: "",
-    setTrackId: () => {},
-});
+export interface GlobalState {
+    viewMode: ViewMode;
+    sortBy?: string[]; // ? ADD ME IN HERE!
+    sortAscending?: boolean;
+    isNowPlaying: boolean;
+    currentTrack: ITrackData;
+}
 
-const GlobalStateUpdateContext = createContext<() => void>(() => {});
+export interface GlobalStateAction {
+    type: "TOGGLE_VIEW_MODE" | "TOGGLE_NOW_PLAYING" | "SET_TRACK";
+    payload?: any;
+}
 
-export const useGlobalState = () => {
-    return useContext(GlobalStateContext);
+const initialState: GlobalState = {
+    viewMode: ViewMode.GRID,
+    isNowPlaying: false,
+    currentTrack: {},
 };
 
-export const useGlobalStateContext = () => {
-    return useContext(GlobalStateUpdateContext);
+export const GlobalStateContext = createContext<GlobalState | undefined>(
+    undefined
+);
+export const GlobalDispatchContext = createContext<
+    React.Dispatch<GlobalStateAction> | undefined
+>(undefined);
+
+// * * * * * * * * * * * * * * * * * * * * * * * *
+
+const globalStateReducer = (
+    state: GlobalState,
+    action: GlobalStateAction
+): GlobalState => {
+    switch (action.type) {
+        case "TOGGLE_VIEW_MODE":
+            return {
+                ...state,
+                viewMode:
+                    state.viewMode === ViewMode.GRID
+                        ? ViewMode.LIST
+                        : ViewMode.GRID,
+            };
+        case "TOGGLE_NOW_PLAYING":
+            return {
+                ...state,
+                isNowPlaying: !state.isNowPlaying,
+            };
+        case "SET_TRACK":
+            return {
+                ...state,
+                currentTrack: action.payload,
+            };
+        default:
+            return state;
+    }
 };
 
-export const GlobalStateProvider = ({
-    children,
-}: React.PropsWithChildren<{}>) => {
-    const [nowPlaying, setNowPlaying] = useState<boolean>(false);
-    const [trackId, setTrackId] = useState<string>("");
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+
+interface GlobalStateProviderProps {
+    children: ReactNode;
+}
+
+const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
+    const [state, dispatch] = useReducer(globalStateReducer, initialState);
+
+    const toggleViewMode = () => {
+        dispatch({ type: "TOGGLE_VIEW_MODE" });
+    };
+
+    const toggleNowPlaying = () => {
+        dispatch({ type: "TOGGLE_NOW_PLAYING" });
+    };
+
+    const setTrack = (currentTrack: ITrackData) => {
+        dispatch({ type: "SET_TRACK", payload: currentTrack });
+    };
 
     return (
-        <GlobalStateContext.Provider
-            value={{ nowPlaying, setNowPlaying, trackId, setTrackId }}
-        >
-            {children}
+        <GlobalStateContext.Provider value={state}>
+            <GlobalDispatchContext.Provider value={dispatch}>
+                {children}
+            </GlobalDispatchContext.Provider>
         </GlobalStateContext.Provider>
     );
 };
+
+export const useGlobalState = (): GlobalState => {
+    const context = useContext(GlobalStateContext);
+    if (context === undefined) {
+        throw new Error(
+            "useGlobalState must be used within a GlobalStateProvider"
+        );
+    }
+    return context;
+};
+
+export const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
+    const dispatch = useContext(GlobalDispatchContext);
+
+    if (!dispatch) {
+        throw new Error(
+            "useGlobalDispatch must be used within a GlobalStateProvider"
+        );
+    }
+
+    return dispatch;
+};
+
+export const setTrack = (currentTrack: ITrackData) => {
+    const dispatch = useGlobalDispatch();
+    dispatch({ type: "SET_TRACK", payload: currentTrack });
+};
+
+export const toggleNowPlaying = () => {
+    const dispatch = useGlobalDispatch();
+    dispatch({ type: "TOGGLE_NOW_PLAYING" });
+};
+
+export default GlobalStateProvider;

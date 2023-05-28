@@ -1,5 +1,5 @@
 "use client";
-import { useTypewriterEffect } from "@/utils/typewriter-effect";
+import { useTypewriterEffect } from "@/utils/use-typewriter-effect";
 
 export const TagLine = () => {
     const tagline = "Delivering the finest new house and techno.";

@@ -3,7 +3,7 @@ import {
     GlobalDispatchContext,
     GlobalStateContext,
     ViewMode,
-} from "@/utils/global-state-context";
+} from "@/config/global-state";
 import { useContext } from "react";
 import { FaList } from "react-icons/fa";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
