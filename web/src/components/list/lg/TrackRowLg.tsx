@@ -5,7 +5,7 @@ import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
 
-const listLgColumnWidths = "grid-cols-[50px,128px,1fr,225px,210px,75px]";
+const listLgColumnWidths = "grid-cols-[50px,128px,1fr,75px,225px,210px,75px]";
 
 export const TrackRowLg = ({
     track,
@@ -61,15 +61,21 @@ export const TrackRowLg = ({
                         </div>
                     </div>
                     <div
+                        id="date"
+                        className="hidden items-center text-gray-800 lg:inline-flex"
+                    >
+                        Jan, 2007
+                    </div>
+                    <div
                         id="label"
-                        className="hidden items-center pl-2 text-pink-700 lg:inline-flex"
+                        className="text-md ml-[40px] hidden items-center pl-2 text-pink-700 lg:inline-flex"
                     >
                         {track.label}
                     </div>
                     <div id="controls" className="flex items-center">
                         "CONTROLS"
                     </div>
-                    <div className="color-gray-600 inline-flex items-center justify-center pr-6">
+                    <div className="inline-flex items-center justify-center pr-6 text-gray-600">
                         <TrackDuration duration={track.duration} />
                     </div>
                 </div>
