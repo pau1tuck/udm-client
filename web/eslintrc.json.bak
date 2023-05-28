@@ -1,28 +1,33 @@
 {
-    "extends": [
-        "next/babel",
-        "next/core-web-vitals",
-        "eslint:all",
-        "plugin:react/all",
-        "plugin:import/errors",
-        "plugin:import/warnings"
-    ],
-    "plugins": [
-        "sort-keys-fix",
-        "simple-import-sort",
-        "react-hooks",
-    ],
-    "env": {
-        "browser": true,
-        "es2023": true,
-        "node": true,
-        "jest": true
-    },
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         }
+    },
+    "extends": [
+        "next/babel",
+        "next/core-web-vitals",
+        "eslint:all",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/all",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "react-hooks",
+        "import",
+        "sort-keys-fix",
+        "simple-import-sort",
+    ],
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "node": true,
+        "jest": true
     },
     "ignorePatterns": [
         "node_modules/",
