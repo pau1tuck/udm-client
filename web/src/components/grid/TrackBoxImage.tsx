@@ -7,8 +7,8 @@ import {
 } from "@/utils/global-state-context";
 
 export const TrackBoxImage = ({ track }: { track: ITrackData }) => {
-    const { isNowPlaying, currentTrack } = useGlobalState();
-    const dispatch = useGlobalDispatch();
+    const { isNowPlaying, currentTrack } = useGlobalState(); // State variables
+    const dispatch = useGlobalDispatch(); // Reducer dispatch function
 
     const setTrack = (currentTrack: ITrackData) => {
         dispatch({ type: "SET_TRACK", payload: currentTrack });
@@ -18,17 +18,17 @@ export const TrackBoxImage = ({ track }: { track: ITrackData }) => {
         dispatch({ type: "TOGGLE_NOW_PLAYING" });
     };
 
-    const handleImageClick = (): void => {
+    const handleImageClick = () => {
         if (track?.trackId) {
             if (isNowPlaying) {
                 if (track.trackId === currentTrack.trackId) {
-                    toggleNowPlaying(); // -> FALSE
+                    toggleNowPlaying(); // -> TO FALSE
                 } else {
-                    setTrack(track); // -> TRUE
+                    setTrack(track); // -> TO TRUE
                 }
             } else {
                 setTrack(track);
-                toggleNowPlaying(); // -> TRUE
+                toggleNowPlaying(); // -> TO TRUE
             }
         }
         console.log(
