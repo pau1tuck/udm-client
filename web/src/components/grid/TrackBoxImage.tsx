@@ -20,15 +20,15 @@ export const TrackBoxImage = ({ track }: { track: ITrackData }) => {
 
     const handleImageClick = () => {
         if (track?.trackId) {
-            if (isNowPlaying) {
-                if (track.trackId === currentTrack.trackId) {
-                    toggleNowPlaying(); // -> TO FALSE
-                } else {
-                    setTrack(track); // -> TO TRUE
-                }
+            if (isNowPlaying && track.trackId === currentTrack.trackId) {
+                // If the clicked track is already playing, set isNowPlaying to false
+                toggleNowPlaying();
             } else {
+                // If the clicked track is different or no track is playing, update both track and isNowPlaying
                 setTrack(track);
-                toggleNowPlaying(); // -> TO TRUE
+                if (!isNowPlaying) {
+                    toggleNowPlaying();
+                }
             }
         }
         console.log(

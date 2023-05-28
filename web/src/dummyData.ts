@@ -136,7 +136,7 @@ export const data = [
     },
     {
         id: "10",
-        trackId: "MZ_iLTzp_yU.mp3",
+        trackId: "MZ_iLTzp_yU",
         title: "All Of A Sudden",
         version: "",
         artist: "The Chemical Brothers",
@@ -151,7 +151,7 @@ export const data = [
     },
     {
         id: "11",
-        trackId: "Hlpn4jPICNA.mp",
+        trackId: "Hlpn4jPICNA",
         title: "Catan",
         version: "",
         artist: "Cafius",

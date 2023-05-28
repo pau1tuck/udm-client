@@ -1,33 +1,27 @@
-import { useGlobalState } from "@/config/global-state";
-import { useEffect, useRef, useState } from "react";
+import { GlobalStateContext } from "@/utils/global-state-context";
+import { useContext, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
 
-interface IAudioPlayerProps {
-    trackId: string;
-    nowPlaying: boolean;
-}
-
-export const AudioPlayer = (props: IAudioPlayerProps) => {
-    const { trackId } = useGlobalState();
-    const [isClient, setIsClient] = useState(false);
+export const AudioPlayer = () => {
+    const { isNowPlaying, currentTrack } = useContext(GlobalStateContext) || {};
     const playerRef = useRef<ReactPlayer | null>(null);
 
     useEffect(() => {
-        setIsClient(true);
-        if (props.nowPlaying) {
-            // Play the audio
+        if (isNowPlaying) {
             playerRef.current?.getInternalPlayer()?.play();
         } else {
-            // Pause the audio
             playerRef.current?.getInternalPlayer()?.pause();
         }
-    }, [props.nowPlaying]);
+    }, [isNowPlaying]);
 
-    return isClient ? (
+    if (!currentTrack?.trackId) {
+        return null;
+    }
+    return (
         <div style={{ width: "100%", height: "55px" }}>
             <ReactPlayer
                 ref={playerRef}
-                url={`/media/${trackId}.mp3`}
+                url={`/audio/${currentTrack.trackId}.mp3`}
                 controls={true}
                 width="100%"
                 height="100%"
@@ -42,5 +36,5 @@ export const AudioPlayer = (props: IAudioPlayerProps) => {
                 }}
             />
         </div>
-    ) : null;
+    );
 };
