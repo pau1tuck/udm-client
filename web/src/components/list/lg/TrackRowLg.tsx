@@ -5,6 +5,7 @@ import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
 import { getMonthShorthand } from "@/utils/get-month-shorthand";
+import { FaShoppingCart } from "react-icons/fa";
 
 export const listViewLgColumnWidths =
     "grid-cols-[50px,128px,1fr,75px,225px,210px,75px]";
@@ -75,8 +76,11 @@ export const TrackRowLg = ({
                     >
                         {track.label}
                     </div>
-                    <div id="controls" className="flex items-center">
-                        "CONTROLS"
+                    <div
+                        id="controls"
+                        className="flex cursor-pointer items-center"
+                    >
+                        <FaShoppingCart />
                     </div>
                     <div className="inline-flex items-center justify-center pr-6 text-gray-600">
                         <TrackDuration duration={track.duration} />

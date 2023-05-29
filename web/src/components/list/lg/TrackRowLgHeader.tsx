@@ -38,8 +38,12 @@ export const TrackRowLgHeader = () => {
                     >
                         <div className="flex flex-col">
                             <p className="inline-flex">
-                                <span className="pr-[5px]">Title, Artist</span>
-                                <span className="pt-[3px] text-sm">
+                                <span className="pr-[10px]">
+                                    Title
+                                    <br />
+                                    Artist
+                                </span>
+                                <span className="mt-[13px] text-sm">
                                     <BiCaretUp />
                                 </span>
                             </p>
@@ -50,10 +54,10 @@ export const TrackRowLgHeader = () => {
                         className="hidden items-center lg:inline-flex"
                     >
                         <p className="inline-flex text-xl">
-                            <span className="pr-[5px] pt-[2px]">
+                            <span className="mt-[3px] pr-[5px]">
                                 <HiOutlineCalendar />
                             </span>
-                            <span className="pt-[3px] text-sm">
+                            <span className="mt-[2px] pt-[3px] text-sm">
                                 <BiCaretUp />
                             </span>
                         </p>
