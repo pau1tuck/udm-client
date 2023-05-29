@@ -5,7 +5,8 @@ import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
 
-const listLgColumnWidths = "grid-cols-[50px,128px,1fr,75px,225px,210px,75px]";
+export const listViewLgColumnWidths =
+    "grid-cols-[50px,128px,1fr,75px,225px,210px,75px]";
 
 export const TrackRowLg = ({
     track,
@@ -21,7 +22,7 @@ export const TrackRowLg = ({
                 style={{ gridTemplateRows: "auto auto" }}
             >
                 <div
-                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listLgColumnWidths} font-base text-sm`}
+                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listViewLgColumnWidths} font-base text-sm`}
                 >
                     <div
                         id="index"
@@ -83,5 +84,3 @@ export const TrackRowLg = ({
         </div>
     );
 };
-
-export default TrackRowLg;

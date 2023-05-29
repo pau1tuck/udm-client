@@ -1,6 +1,6 @@
 import { ITrackData } from "@/types/track.types";
 import { useTrackClickHandler } from "@/utils/use-track-click-handler";
-import TrackRowLg from "./lg/TrackRowLg";
+import { TrackRowLg } from "./lg/TrackRowLg";
 
 export const TrackRow = ({
     track,

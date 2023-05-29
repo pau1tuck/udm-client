@@ -1,7 +1,10 @@
+import { TrackRowLgHeader } from "./lg/TrackRowLgHeader";
+
 export const ListView = ({ children }: React.PropsWithChildren) => {
     return (
         <div className="">
-            <div className="">{children}</div>
+            <TrackRowLgHeader />
+            <div className="">{children}T</div>
         </div>
     );
 };
