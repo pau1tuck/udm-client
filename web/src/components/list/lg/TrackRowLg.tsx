@@ -4,6 +4,7 @@ import { TrackImage } from "@/components/track/TrackImage";
 import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
+import { getMonthShorthand } from "@/utils/get-month-shorthand";
 
 export const listViewLgColumnWidths =
     "grid-cols-[50px,128px,1fr,75px,225px,210px,75px]";
@@ -65,7 +66,8 @@ export const TrackRowLg = ({
                         id="date"
                         className="hidden items-center text-gray-800 lg:inline-flex"
                     >
-                        Jan, 2022
+                        {track.month && getMonthShorthand(track.month)}{" "}
+                        {track.year}
                     </div>
                     <div
                         id="label"
