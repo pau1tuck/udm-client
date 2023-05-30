@@ -3,12 +3,11 @@ import { TrackImage } from "@/components/track/TrackImage";
 import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
-import { getMonthShorthand } from "@/utils/get-month-shorthand";
 import { FaShoppingCart } from "react-icons/fa";
 
-export const listViewLgColumnWidths = "grid-cols-[50px,128px,1fr,85px,140px]";
+export const listViewLgColumnWidths = "grid-cols-[50px,128px,1fr,140px]";
 
-export const TrackRowMd = ({
+export const TrackRowSm = ({
     track,
     index,
 }: {
@@ -16,7 +15,7 @@ export const TrackRowMd = ({
     index: number;
 }) => {
     return (
-        <div className="max-w-1024 mx-auto mb-2">
+        <div className="max-w-768 mx-auto mb-2">
             <div
                 className="grid w-full gap-0 bg-customGray font-body font-bold text-gray-500"
                 style={{ gridTemplateRows: "auto auto" }}
@@ -60,13 +59,6 @@ export const TrackRowMd = ({
                                 <TrackArtist artist={track.artist} />
                             </span>
                         </div>
-                    </div>
-                    <div
-                        id="release-date"
-                        className="inline-flex items-center text-gray-800"
-                    >
-                        {track.month && getMonthShorthand(track.month)}{" "}
-                        {track.year && track.year.toString().slice(2)}
                     </div>
                     <div
                         id="controls"
