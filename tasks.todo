@@ -1,8 +1,19 @@
+TODAY:
+    Full Stack Engineer Training:
+        ☐ CV and Cover Letter
+        ☐ React: Design Patterns
+        ☐ React.js Essential Training
+        ☐ Documentaries
+        ☐ udm-client-next
+
 udm-client-next:
     ListView:
         ✔ Create lg ListView header @done (29/05/2023, 22:18:18)
         ☐ Create md ListView
         ☐ Create sm ListView
         ☐ create xs ListView
+        Purchase and configure VPS
+        Prepare sub-domain udm.pau1tuck.com
+        Deploy current version to VPS
     AudioPlayer:
         ☐ Configure player CSS
