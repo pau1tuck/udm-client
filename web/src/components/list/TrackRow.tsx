@@ -3,6 +3,7 @@ import { useTrackClickHandler } from "@/utils/use-track-click-handler";
 import { TrackRowLg } from "./lg/TrackRowLg";
 import { TrackRowMd } from "./md/TrackRowMd";
 import { TrackRowSm } from "./sm/TrackRowSm";
+import { TrackRowXs } from "./xs/TrackRowXs";
 
 export const TrackRow = ({
     track,
@@ -26,7 +27,9 @@ export const TrackRow = ({
             <div className="hidden sm:block">
                 <TrackRowSm track={track} index={index} />
             </div>
-            <div className="xs:block hidden"></div>
+            <div className="xs:block hidden">
+                <TrackRowXs track={track} index={index} />
+            </div>
         </>
     );
 };
