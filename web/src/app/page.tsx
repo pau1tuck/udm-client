@@ -24,9 +24,9 @@ export default function Page() {
         const props = { key, track, index: index + 1 };
 
         return viewMode === ViewMode.GRID ? (
-            <TrackBox {...props} />
+            <TrackBox key={props.key} track={props.track} index={props.index} />
         ) : (
-            <TrackRow {...props} />
+            <TrackRow key={props.key} track={props.track} index={props.index} />
         );
     };
 

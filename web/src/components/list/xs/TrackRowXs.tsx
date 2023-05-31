@@ -1,11 +1,9 @@
 import { TrackArtist } from "@/components/track/TrackArtist";
-import { TrackImage } from "@/components/track/TrackImage";
 import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
-import { FaShoppingCart } from "react-icons/fa";
 
-export const listViewLgColumnWidths = "grid-cols-[50px,128px,1fr,140px]";
+export const listViewLgColumnWidths = "grid-cols-[50px,1fr]";
 
 export const TrackRowXs = ({
     track,
@@ -30,16 +28,6 @@ export const TrackRowXs = ({
                         {index}
                     </div>
                     <div
-                        id="image"
-                        className="inline-flex h-[72px] w-[128px] cursor-pointer items-center"
-                    >
-                        <TrackImage //? change to TrackRowImage (with onClick event)
-                            trackId={track.trackId}
-                            width={128}
-                            height={72}
-                        />
-                    </div>
-                    <div
                         id="title-artist"
                         className="inline-flex items-center pl-10"
                     >
@@ -59,12 +47,6 @@ export const TrackRowXs = ({
                                 <TrackArtist artist={track.artist} />
                             </span>
                         </div>
-                    </div>
-                    <div
-                        id="controls"
-                        className="flex cursor-pointer items-center"
-                    >
-                        <FaShoppingCart />
                     </div>
                 </div>
             </div>

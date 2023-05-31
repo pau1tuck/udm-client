@@ -1,20 +1,24 @@
-TODAY:
-    Full Stack Engineer Training:
-        ☐ CV and Cover Letter
-        ☐ JS Array Methods
-        ☐ React: Design Patterns
-        ☐ React.js Essential Training
-        ☐ Documentaries
-        ☐ udm-client-next
-
 udm-client-next:
+    31.220.54.97.(0O
     ListView:
         ✔ Create lg ListView header @done (29/05/2023, 22:18:18)
-        ☐ Create md ListView
-        ☐ Create sm ListView
-        ☐ create xs ListView
-        Purchase and configure VPS
+        ✔ Create md ListView @done (31/05/2023, 20:10:07)
+        ✔ Create sm ListView @done (31/05/2023, 20:25:39)
+        ✔ create xs ListView @done (31/05/2023, 20:32:38)
+        ☐ Purchase and configure VPS
+            ✔ Buy VPS and install Ubuntu 22 @done (31/05/2023, 20:36:45)
+            ☐ Set up an SSH key to access the VPS
+            ☐ Install correct version of Node.js
+            ☐ Install pnpm
+            ☐ Configure GitHub settings
+            ☐ Clone udm-client
         Prepare sub-domain udm.pau1tuck.com
         Deploy current version to VPS
+        Create ListView headers
+            ☐ lg header
+            ☐ md header
+            ☐ sm header
+            ☐ xs header
+
     AudioPlayer:
-        ☐ Configure player CSS
+        ☐ Modify player CSS

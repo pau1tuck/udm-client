@@ -8,7 +8,7 @@ import { getMonthShorthand } from "@/utils/get-month-shorthand";
 import { FaShoppingCart } from "react-icons/fa";
 
 export const listViewLgColumnWidths =
-    "grid-cols-[50px,128px,1fr,75px,225px,210px,75px]";
+    "grid-cols-[50px,128px,1fr,210px,110px,75px,210px]";
 
 export const TrackRowLg = ({
     track,
@@ -64,26 +64,27 @@ export const TrackRowLg = ({
                         </div>
                     </div>
                     <div
-                        id="date"
-                        className="hidden items-center text-gray-800 lg:inline-flex"
-                    >
-                        {track.month && getMonthShorthand(track.month)}{" "}
-                        {track.year}
-                    </div>
-                    <div
                         id="label"
                         className="text-md ml-[40px] hidden items-center pl-2 text-pink-700 lg:inline-flex"
                     >
                         {track.label}
                     </div>
                     <div
+                        id="date"
+                        className="hidden items-center text-gray-600 lg:inline-flex"
+                    >
+                        {track.month && getMonthShorthand(track.month)}{" "}
+                        {track.year}
+                    </div>
+
+                    <div className="inline-flex items-center justify-center pr-6 text-gray-600">
+                        <TrackDuration duration={track.duration} />
+                    </div>
+                    <div
                         id="controls"
                         className="flex cursor-pointer items-center"
                     >
                         <FaShoppingCart />
-                    </div>
-                    <div className="inline-flex items-center justify-center pr-6 text-gray-600">
-                        <TrackDuration duration={track.duration} />
                     </div>
                 </div>
             </div>
