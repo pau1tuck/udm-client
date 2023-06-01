@@ -8,7 +8,7 @@ import { getMonthShorthand } from "@/utils/get-month-shorthand";
 import { FaShoppingCart } from "react-icons/fa";
 
 export const listViewLgColumnWidths =
-    "grid-cols-[50px,128px,1fr,210px,110px,75px,210px]";
+    "grid-cols-[50px,128px,1fr,210px,105px,85px,210px]";
 
 export const TrackRowLg = ({
     track,
