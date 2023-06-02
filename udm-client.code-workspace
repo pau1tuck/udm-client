@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../udm-server"
+		},
+		{
+			"path": "../udm-typescript/web"
+		}
+	]
+}

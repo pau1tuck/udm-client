@@ -1,19 +1,20 @@
 udm-client-next:
-    31.220.54.97.(0O
+    312205497(0O...
     ListView:
         ✔ Create lg ListView header @done (29/05/2023, 22:18:18)
         ✔ Create md ListView @done (31/05/2023, 20:10:07)
         ✔ Create sm ListView @done (31/05/2023, 20:25:39)
         ✔ create xs ListView @done (31/05/2023, 20:32:38)
-        ☐ Purchase and configure VPS
+        ☐ Host udm-client-next on pau1tuck.com
             ✔ Buy VPS and install Ubuntu 22 @done (31/05/2023, 20:36:45)
-            ☐ Set up an SSH key to access the VPS
+            ✔ Set up an SSH key to access the VPS @done (02/06/2023, 10:42:37)
             ☐ Install correct version of Node.js
             ☐ Install pnpm
             ☐ Configure GitHub settings
             ☐ Clone udm-client
-        Prepare sub-domain udm.pau1tuck.com
-        Deploy current version to VPS
+            ☐ Initialise udm-client-next on port 3001 with pm2
+            ☐ Install firewall and close all ports except 3001
+            ☐ Point udm.pau1tuck.com subdomain to port 3001
         Create ListView headers
             ☐ lg header
             ☐ md header
