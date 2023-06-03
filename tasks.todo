@@ -8,10 +8,13 @@ udm-client-next:
         ☐ Host udm-client-next on pau1tuck.com
             ✔ Buy VPS and install Ubuntu 22 @done (31/05/2023, 20:36:45)
             ✔ Set up an SSH key to access the VPS @done (02/06/2023, 10:42:37)
-            ☐ Install correct version of Node.js
-            ☐ Install pnpm
-            ☐ Configure GitHub settings
+            ✔ Install nvm and correct version of Node.js 18.0.0 @done (03/06/2023, 17:29:55)
+            ✔ Install pnpm @done (03/06/2023, 17:29:56)
+            ✔ Install Git @done (03/06/2023, 17:35:19)
+            ☐ Install and configure vsftp on pau1tuck server
             ☐ Clone udm-client
+            ☐ Configure FileZilla for FTP transfer
+            ☐ Transfer .env using FileZilla
             ☐ Initialise udm-client-next on port 3001 with pm2
             ☐ Install firewall and close all ports except 3001
             ☐ Point udm.pau1tuck.com subdomain to port 3001
@@ -21,5 +24,5 @@ udm-client-next:
             ☐ sm header
             ☐ xs header
 
-    AudioPlayer:
+    AudioPlayer:`
         ☐ Modify player CSS
