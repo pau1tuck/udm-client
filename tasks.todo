@@ -11,18 +11,21 @@ udm-client-next:
             ✔ Install nvm and correct version of Node.js 18.0.0 @done (03/06/2023, 17:29:55)
             ✔ Install pnpm @done (03/06/2023, 17:29:56)
             ✔ Install Git @done (03/06/2023, 17:35:19)
-            ☐ Install and configure vsftp on pau1tuck server
-            ☐ Clone udm-client
-            ☐ Configure FileZilla for FTP transfer
-            ☐ Transfer .env using FileZilla
+            ✔ Install and configure vsftp on pau1tuck server @done (04/06/2023, 06:40:15)
+            ✔ Configure FileZilla for FTP transfer @done (04/06/2023, 06:40:33)
+            ✔ Transfer .env using FileZilla @done (04/06/2023, 06:40:22)
+            ✔ Clone udm-client @done (04/06/2023, 06:40:25)
+            ☐ Remove interfering tsx file from root directory
+            ☐ Build udm-client-next with WebPack
+            ☐ Configure Nginx to reroute application
             ☐ Initialise udm-client-next on port 3001 with pm2
-            ☐ Install firewall and close all ports except 3001
-            ☐ Point udm.pau1tuck.com subdomain to port 3001
+            ☐ Install __ firewall on server
+            ☐ Close all ports except Nginx/3001
+            ☐ Point udm.pau1tuck.com subdomain to port 3001 on Hostinger
         Create ListView headers
             ☐ lg header
             ☐ md header
             ☐ sm header
             ☐ xs header
-
-    AudioPlayer:`
-        ☐ Modify player CSS
+    AudioPlayer:
+        ☐ Modify player CSS 
