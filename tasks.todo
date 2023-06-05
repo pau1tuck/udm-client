@@ -1,5 +1,5 @@
 udm-client-next:
-    312205497(0O...
+    312205497(0O....31.22.054.97)
     ListView:
         ✔ Create lg ListView header @done (29/05/2023, 22:18:18)
         ✔ Create md ListView @done (31/05/2023, 20:10:07)
@@ -15,13 +15,15 @@ udm-client-next:
             ✔ Configure FileZilla for FTP transfer @done (04/06/2023, 06:40:33)
             ✔ Transfer .env using FileZilla @done (04/06/2023, 06:40:22)
             ✔ Clone udm-client @done (04/06/2023, 06:40:25)
-            ☐ Remove interfering tsx file from root directory
-            ☐ Build udm-client-next with WebPack
-            ☐ Configure Nginx to reroute application
+            ✔ Remove interfering tsx file from root directory @done (05/06/2023, 06:41:57)
+            ✔ Build udm-client-next with WebPack @done (05/06/2023, 06:42:00)
+            ✔ Set up and configure Uncomplicated Firewall (ufw) for port 3001 @done (05/06/2023, 09:49:39)
+            ✔ Configure Nginx to reroute application @done (05/06/2023, 09:56:04)
+            ☐ Temporarily run pnpm dev on port 3001
+            ☐ Point udm.pau1tuck.com subdomain to port 3001 on Hostinger
             ☐ Initialise udm-client-next on port 3001 with pm2
             ☐ Install __ firewall on server
             ☐ Close all ports except Nginx/3001
-            ☐ Point udm.pau1tuck.com subdomain to port 3001 on Hostinger
         Create ListView headers
             ☐ lg header
             ☐ md header
