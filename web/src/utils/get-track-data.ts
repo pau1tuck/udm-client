@@ -4,4 +4,6 @@ export const getTrackData = () => {
     return data;
 };
 
-export const getFavoritesData = () => {};
+export const getFavoritesData = () => {
+    return null;
+};

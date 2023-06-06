@@ -13,7 +13,6 @@ export function TrackRow({
     index: number;
 }) {
     const handleTrackClick = useTrackClickHandler();
-
     return (
         <div onClick={() => handleTrackClick(track)}>
             <div className="hidden lg:block xl:block 2xl:block">

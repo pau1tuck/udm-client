@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 // Page: user/login
 const Page: React.FC = () => {
     return (

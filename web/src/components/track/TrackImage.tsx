@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { getServerSideProps } from "@/utils/get-track-image";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface ITrackImageProps {
     trackId?: string;
@@ -43,3 +43,7 @@ export function TrackImage({ trackId, width, height }: ITrackImageProps) {
     }
     return null;
 }
+
+TrackImage.defaultProps = {
+    trackId: null,
+};
