@@ -6,10 +6,10 @@ import { ITrackData } from "@/types/track.types";
 
 export function TrackBoxData({
     track,
-    _index,
+    index,
 }: {
     track: ITrackData;
-    _index: number;
+    index: number;
 }) {
     return (
         <div className="mt-5 text-center font-cursive text-white">
