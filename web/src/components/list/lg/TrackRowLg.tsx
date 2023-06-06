@@ -20,11 +20,11 @@ export function TrackRowLg({
     return (
         <div className="mx-auto mb-2 max-w-[1280px]">
             <div
-                className="grid w-full gap-0 bg-customGray font-body font-bold text-gray-500"
+                className="grid w-full gap-0 bg-customGray font-display text-gray-500"
                 style={{ gridTemplateRows: "auto auto" }}
             >
                 <div
-                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listViewLgColumnWidths} font-body text-sm`}
+                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listViewLgColumnWidths} text-sm`}
                 >
                     <div
                         id="index"
@@ -65,7 +65,7 @@ export function TrackRowLg({
                     </div>
                     <div
                         id="label"
-                        className="ml-[40px] hidden items-center pl-2 text-base text-pink-700 lg:inline-flex"
+                        className="ml-[40px] hidden items-center pl-2 text-pink-600 lg:inline-flex"
                     >
                         {track.label}
                     </div>

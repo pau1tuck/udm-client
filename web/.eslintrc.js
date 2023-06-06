@@ -37,7 +37,7 @@ module.exports = {
             { argsIgnorePattern: "^_" },
         ],
         "react/function-component-definition": [0],
-        "react/require-default-props": [1],
+        "react/require-default-props": [0],
         "react/boolean-prop-naming": [0],
         "react/button-has-type": [1],
         "react/default-props-match-prop-types": [2],

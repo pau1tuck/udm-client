@@ -10,7 +10,7 @@ interface ITrackImageProps {
     height: number;
 }
 
-export function TrackImage({ trackId, width, height }: ITrackImageProps) {
+export function TrackImage({ trackId = "", width, height }: ITrackImageProps) {
     const [imageUrl, setImageUrl] = useState<string | null>(null);
 
     useEffect(() => {
@@ -43,7 +43,3 @@ export function TrackImage({ trackId, width, height }: ITrackImageProps) {
     }
     return null;
 }
-
-TrackImage.defaultProps = {
-    trackId: null,
-};
