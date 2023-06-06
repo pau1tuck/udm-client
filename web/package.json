@@ -1,7 +1,11 @@
 {
     "name": "udm-client-next",
     "version": "4.2.0",
+    "author": "Paul Tuck @pau1tuck",
     "private": true,
+    "eslintConfig": {
+        "extends": "./.eslintrc.js"
+    },
     "scripts": {
         "dev": "next dev -p 3001",
         "build": "next build",

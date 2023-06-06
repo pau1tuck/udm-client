@@ -3,7 +3,7 @@ import { HiOutlineCalendar } from "react-icons/hi";
 import { MdNumbers } from "react-icons/md";
 import { listViewLgColumnWidths } from "./TrackRowLg";
 
-export const TrackRowLgHeader = () => {
+export function TrackRowLgHeader() {
     return (
         <div className="max-w-1280 mx-auto mb-2">
             <div
@@ -31,7 +31,7 @@ export const TrackRowLgHeader = () => {
                     <div
                         id="image"
                         className="inline-flex h-[72px] w-[128px] cursor-pointer items-center"
-                    ></div>
+                    />
                     <div
                         id="title-artist"
                         className="inline-flex items-center pl-10"
@@ -74,10 +74,10 @@ export const TrackRowLgHeader = () => {
                             </span>
                         </p>
                     </div>
-                    <div id="controls" className="flex items-center"></div>
+                    <div id="controls" className="flex items-center" />
                     <div className="inline-flex items-center justify-center pr-6">
                         <p className="inline-flex text-xl">
-                            <span className="pl-[5px] pr-[5px]">
+                            <span className="px-[5px]">
                                 <BiTime />
                             </span>
                             <span className="[pt-3px] text-sm">
@@ -89,4 +89,4 @@ export const TrackRowLgHeader = () => {
             </div>
         </div>
     );
-};
+}

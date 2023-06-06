@@ -16,8 +16,8 @@ const title = process.env.NEXT_PUBLIC_SITE_TITLE;
 const description = process.env.NEXT_PUBLIC_SITE_DESCRIPTION;
 
 export const metadata = {
-    title: title,
-    description: description,
+    title,
+    description,
 };
 
 console.log(React.version);
@@ -32,11 +32,11 @@ export default function RootLayout({
             <html lang="en">
                 <body className={inter.className}>
                     <AudioWrapper>
-                        <div className="min-h-screen bg-custom font-standard">
+                        <div className="bg-custom min-h-screen font-standard">
                             <nav>
                                 <NavBar />
                             </nav>
-                            <div className="max-w-screen-xl mx-auto px-4">
+                            <div className="mx-auto max-w-screen-xl px-4">
                                 <header className="">
                                     <Header />
                                 </header>

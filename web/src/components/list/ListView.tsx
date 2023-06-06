@@ -1,8 +1,8 @@
-export const ListView = ({ children }: React.PropsWithChildren) => {
+export function ListView({ children }: React.PropsWithChildren) {
     return (
         <div className="">
-            {/*<TrackRowLgHeader />*/}
+            {/* <TrackRowLgHeader /> */}
             <div className="">{children}T</div>
         </div>
     );
-};
+}

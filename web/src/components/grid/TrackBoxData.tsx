@@ -4,15 +4,15 @@ import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
 
-export const TrackBoxData = ({
+export function TrackBoxData({
     track,
     index,
 }: {
     track: ITrackData;
     index: number;
-}) => {
+}) {
     return (
-        <div className="mt-5 font-cursive text-center text-white">
+        <div className="mt-5 text-center font-cursive text-white">
             <div className="mt-2 rounded-md">
                 <TrackTitle title={track.title} />
             </div>
@@ -29,4 +29,4 @@ export const TrackBoxData = ({
             </div>
         </div>
     );
-};
+}

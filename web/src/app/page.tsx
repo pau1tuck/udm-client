@@ -1,4 +1,5 @@
 "use client";
+
 import { GridView } from "@/components/grid/GridView";
 import { TrackBox } from "@/components/grid/TrackBox";
 import { ListView } from "@/components/list/ListView";

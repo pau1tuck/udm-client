@@ -2,14 +2,14 @@
 const Page: React.FC = () => {
     return (
         <div className="flex items-center justify-center">
-            <div className="p-8 bg-darkGray rounded shadow-md text-gray-200">
-                <h2 className="text-2xl font-bold mb-4">Login</h2>
+            <div className="bg-darkGray rounded p-8 text-gray-200 shadow-md">
+                <h2 className="mb-4 text-2xl font-bold">Login</h2>
                 <div className="mb-4">
-                    <label className="block text-gray-400 mb-2" htmlFor="email">
+                    <label className="mb-2 block text-gray-400" htmlFor="email">
                         Email:
                     </label>
                     <input
-                        className="w-full py-2 px-3 border border-gray-300 rounded text-black"
+                        className="w-full rounded border border-gray-300 px-3 py-2 text-black"
                         type="email"
                         id="email"
                         placeholder="Enter your email"
@@ -17,28 +17,37 @@ const Page: React.FC = () => {
                 </div>
                 <div className="mb-4">
                     <label
-                        className="block text-gray-400 mb-2"
+                        className="mb-2 block text-gray-400"
                         htmlFor="password"
                     >
                         Password:
                     </label>
                     <input
-                        className="w-full py-2 px-3 border border-gray-300 rounded text-black"
+                        className="w-full rounded border border-gray-300 px-3 py-2 text-black"
                         type="password"
                         id="password"
                         placeholder="Enter your password"
                     />
                 </div>
-                <div className="flex justify-center items-center mt-8 mb-7">
-                    <button className="bg-secondary hover:bg-secondary-dark text-white py-2 px-4 rounded">
+                <div className="mb-7 mt-8 flex items-center justify-center">
+                    <button
+                        type="button"
+                        className="hover:bg-secondary-dark rounded bg-secondary px-4 py-2 text-white"
+                    >
                         Log In
                     </button>
-                    <button className="bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded ml-2">
+                    <button
+                        type="button"
+                        className="hover:bg-primary-dark ml-2 rounded bg-primary px-4 py-2 text-white"
+                    >
                         Sign Up
                     </button>
                 </div>
                 <div className="flex justify-center">
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">
+                    <button
+                        type="button"
+                        className="w-full rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                    >
                         Sign in with Google
                     </button>
                 </div>

@@ -1,7 +1,7 @@
 import { TagLine } from "../header/TagLine";
 import { ViewModeButton } from "./ViewModeButton";
 
-export const ViewModeController = (props: { grid: boolean }) => {
+export function ViewModeController(props: { grid: boolean }) {
     const gridView = (
         <>
             <div className="flex justify-between">
@@ -34,4 +34,4 @@ export const ViewModeController = (props: { grid: boolean }) => {
             </div>
         </div>
     );
-};
+}

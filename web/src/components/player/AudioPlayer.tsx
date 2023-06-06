@@ -2,7 +2,7 @@ import { GlobalStateContext } from "@/config/global-state";
 import { useContext, useRef } from "react";
 import ReactPlayer from "react-player";
 
-export const AudioPlayer = () => {
+export function AudioPlayer() {
     const { isNowPlaying, currentTrack } = useContext(GlobalStateContext) || {};
     const playerRef = useRef<ReactPlayer | null>(null);
 
@@ -15,7 +15,7 @@ export const AudioPlayer = () => {
                 ref={playerRef}
                 url={`/audio/${currentTrack.trackId}.mp3`}
                 playing={isNowPlaying}
-                controls={true}
+                controls
                 width="100%"
                 height="100%"
                 config={{
@@ -30,4 +30,4 @@ export const AudioPlayer = () => {
             />
         </div>
     );
-};
+}

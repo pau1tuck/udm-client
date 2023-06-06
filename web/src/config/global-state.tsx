@@ -1,4 +1,5 @@
 "use client";
+
 import { ITrackData } from "@/types/track.types";
 import { ReactNode, createContext, useContext, useReducer } from "react";
 
@@ -69,7 +70,7 @@ interface GlobalStateProviderProps {
     children: ReactNode;
 }
 
-const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
+function GlobalStateProvider({ children }: GlobalStateProviderProps) {
     const [state, dispatch] = useReducer(globalStateReducer, initialState);
 
     const toggleViewMode = () => {
@@ -91,7 +92,7 @@ const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
             </GlobalDispatchContext.Provider>
         </GlobalStateContext.Provider>
     );
-};
+}
 
 export const useGlobalState = (): GlobalState => {
     const context = useContext(GlobalStateContext);

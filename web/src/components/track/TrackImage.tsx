@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getServerSideProps } from "@/utils/get-track-image";
@@ -9,7 +10,7 @@ interface ITrackImageProps {
     height: number;
 }
 
-export const TrackImage = ({ trackId, width, height }: ITrackImageProps) => {
+export function TrackImage({ trackId, width, height }: ITrackImageProps) {
     const [imageUrl, setImageUrl] = useState<string | null>(null);
 
     useEffect(() => {
@@ -39,7 +40,6 @@ export const TrackImage = ({ trackId, width, height }: ITrackImageProps) => {
                 height={height}
             />
         );
-    } else {
-        return null;
     }
-};
+    return null;
+}

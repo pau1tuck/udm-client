@@ -1,4 +1,5 @@
 "use client";
+
 import { useGlobalDispatch, useGlobalState } from "@/config/global-state";
 import { ITrackData } from "@/types/track.types";
 
@@ -6,8 +7,8 @@ export const useTrackClickHandler = () => {
     const { isNowPlaying, currentTrack } = useGlobalState(); // State variables
     const dispatch = useGlobalDispatch(); // Reducer dispatch function
 
-    const setTrack = (currentTrack: ITrackData) => {
-        dispatch({ type: "SET_TRACK", payload: currentTrack });
+    const setTrack = (track: ITrackData) => {
+        dispatch({ type: "SET_TRACK", payload: track });
     };
 
     const toggleNowPlaying = () => {

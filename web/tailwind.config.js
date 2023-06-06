@@ -9,9 +9,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                display: ["Quicksand", "ui-sans-serif", "Georgia"],
-                body: ["Montserrat", "ui-sans-serif", "Georgia"],
-                standard: ["Inter", "sans-serif"],
+                heading: ["Quicksand", "ui-sans-serif", "Georgia"],
+                body: ["Inter", "sans-serif"],
+                display: ["Montserrat", "ui-sans-serif", "Georgia"],
                 cursive: ["Architects Daughter", "cursive", "ui-sans-serif"],
             },
             colors: {

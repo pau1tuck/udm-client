@@ -1,4 +1,5 @@
 "use client";
+
 import {
     GlobalDispatchContext,
     GlobalStateContext,
@@ -8,13 +9,13 @@ import { useContext } from "react";
 import { FaList } from "react-icons/fa";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 
-export const ViewModeButton = () => {
+export function ViewModeButton() {
     const state = useContext(GlobalStateContext);
     const dispatch = useContext(GlobalDispatchContext);
 
     // Handle the case where the state is undefined
     if (!state) {
-        return null; //? or any fallback UI if needed
+        return null; // ? or any fallback UI if needed
     }
     if (!dispatch) {
         return null;
@@ -29,7 +30,11 @@ export const ViewModeButton = () => {
 
     return (
         <div>
-            <button onClick={toggleViewMode} className="cursor-pointer">
+            <button
+                type="button"
+                onClick={toggleViewMode}
+                className="cursor-pointer"
+            >
                 {viewMode === ViewMode.GRID ? (
                     <FaList />
                 ) : (
@@ -38,4 +43,4 @@ export const ViewModeButton = () => {
             </button>
         </div>
     );
-};
+}

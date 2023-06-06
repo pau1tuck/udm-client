@@ -34,3 +34,7 @@ body {
         rgb(var(--background-start-rgb));
     color: rgb(var(--foreground-rgb));
 }
+
+.grid-template-rows-auto {
+    grid-template-rows: auto auto;
+}

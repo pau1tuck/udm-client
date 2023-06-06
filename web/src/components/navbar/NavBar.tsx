@@ -1,10 +1,10 @@
 export const NavBar: React.FC = () => {
     return (
-        <div className="flex justify-end mr-4 p-4 font-standard text-md">
-            <button className="inline-block mr-2 px-4 py-2 text-gray-200 hover:text-white">
+        <div className="text-md mr-4 flex justify-end p-4 font-body">
+            <button className="mr-2 inline-block px-4 py-2 text-gray-200 hover:text-white">
                 Log In
             </button>
-            <button className="inline-block px-4 py-2 rounded bg-blue-700 text-white hover:bg-blue-800">
+            <button className="inline-block rounded bg-blue-700 px-4 py-2 text-white hover:bg-blue-800">
                 Sign Up
             </button>
         </div>

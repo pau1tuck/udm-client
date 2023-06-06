@@ -1,4 +1,5 @@
 "use client";
+
 import { AudioPlayer } from "./AudioPlayer";
 
 type TWrapperProps = {
@@ -7,9 +8,9 @@ type TWrapperProps = {
 
 export const AudioWrapper: React.FC<TWrapperProps> = ({ children }) => {
     return (
-        <div className="min-h-screen flex flex-col">
-            <main className="flex-grow">{children}</main>
-            <footer className="flex fixed bottom-0 left-0 right-0 justify-center shadow-md">
+        <div className="flex min-h-screen flex-col">
+            <main className="grow">{children}</main>
+            <footer className="fixed inset-x-0 bottom-0 flex justify-center shadow-md">
                 <AudioPlayer />
             </footer>
         </div>

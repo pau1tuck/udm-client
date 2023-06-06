@@ -10,13 +10,13 @@ import { FaShoppingCart } from "react-icons/fa";
 export const listViewLgColumnWidths =
     "grid-cols-[50px,128px,1fr,210px,105px,85px,210px]";
 
-export const TrackRowLg = ({
+export function TrackRowLg({
     track,
     index,
 }: {
     track: ITrackData;
     index: number;
-}) => {
+}) {
     return (
         <div className="max-w-1280 mx-auto mb-2">
             <div
@@ -36,7 +36,7 @@ export const TrackRowLg = ({
                         id="image"
                         className="inline-flex h-[72px] w-[128px] cursor-pointer items-center"
                     >
-                        <TrackImage //? change to TrackRowImage (with onClick event)
+                        <TrackImage // ? change to TrackRowImage (with onClick event)
                             trackId={track.trackId}
                             width={128}
                             height={72}
@@ -90,4 +90,4 @@ export const TrackRowLg = ({
             </div>
         </div>
     );
-};
+}

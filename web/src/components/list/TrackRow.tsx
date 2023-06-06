@@ -5,13 +5,13 @@ import { TrackRowMd } from "./md/TrackRowMd";
 import { TrackRowSm } from "./sm/TrackRowSm";
 import { TrackRowXs } from "./xs/TrackRowXs";
 
-export const TrackRow = ({
+export function TrackRow({
     track,
     index,
 }: {
     track: ITrackData;
     index: number;
-}) => {
+}) {
     const handleTrackClick = useTrackClickHandler();
 
     return (
@@ -30,4 +30,4 @@ export const TrackRow = ({
             </div>
         </div>
     );
-};
+}
