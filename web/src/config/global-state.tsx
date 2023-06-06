@@ -116,14 +116,4 @@ export const useGlobalDispatch = (): React.Dispatch<GlobalStateAction> => {
     return dispatch;
 };
 
-export const setTrack = (currentTrack: ITrackData) => {
-    const dispatch = useGlobalDispatch();
-    dispatch({ type: "SET_TRACK", payload: currentTrack });
-};
-
-export const toggleNowPlaying = () => {
-    const dispatch = useGlobalDispatch();
-    dispatch({ type: "TOGGLE_NOW_PLAYING" });
-};
-
 export default GlobalStateProvider;

@@ -1,5 +1,5 @@
 import { Header } from "@/components/header/Header";
-import { NavBar } from "@/components/navbar/NavBar";
+import { Navbar } from "@/components/navbar/Navbar";
 import { AudioWrapper } from "@/components/player/AudioWrapper";
 import GlobalStateProvider from "@/config/global-state";
 import "@fontsource/architects-daughter/400.css";
@@ -20,8 +20,6 @@ export const metadata = {
     description,
 };
 
-console.log(React.version);
-
 export default function RootLayout({
     children,
 }: {
@@ -32,9 +30,9 @@ export default function RootLayout({
             <html lang="en">
                 <body className={inter.className}>
                     <AudioWrapper>
-                        <div className="bg-custom min-h-screen font-standard">
+                        <div className="bg-custom min-h-screen font-display">
                             <nav>
-                                <NavBar />
+                                <Navbar />
                             </nav>
                             <div className="mx-auto max-w-screen-xl px-4">
                                 <header className="">

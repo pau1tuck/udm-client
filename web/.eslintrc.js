@@ -13,7 +13,7 @@ module.exports = {
         },
     },
     extends: [
-        "airbnb-typescript-prettier",
+        // "airbnb-typescript-prettier",
         "plugin:react/recommended",
         // "plugin:@typescript-eslint/recommended", Uses the recommended rules from the @typescript-eslint/eslint-plugin
         "plugin:react-hooks/recommended", // Uses the recommended rules from @eslint-plugin-react-hooks
@@ -24,12 +24,12 @@ module.exports = {
     ],
     plugins: ["import", "sort-keys-fix", "simple-import-sort"],
     rules: {
-        "no-console": [0],
-        "import/prefer-default-export": "off",
-        "max-classes-per-file": [1],
-        "class-methods-use-this": [1],
-        "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/no-explicit-any": "warn",
+        "import/prefer-default-export": [0], // off
+        "no-console": [1], // warn
+        "max-classes-per-file": [2], // error
+        "class-methods-use-this": [2],
+        //"@typescript/no-unused-vars": [1],
+        //"@typescript/no-explicit-any": [1],
         "react/function-component-definition": [0],
     },
 };

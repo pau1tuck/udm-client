@@ -24,7 +24,7 @@ export const useTypewriterEffect = (
 
             return () => clearTimeout(timer); // Clear the timeout if the component is unmounted
         }
-    }, [text, index, customText]); // Add customText to the dependencies array
+    }, [text, index, customText, speed]); // Add customText to the dependencies array
 
     return text;
 };

@@ -15,13 +15,13 @@ export function TrackRowSm({
     index: number;
 }) {
     return (
-        <div className="max-w-768 mx-auto mb-2">
+        <div className="mx-auto mb-2 max-w-[768px]">
             <div
                 className="grid w-full gap-0 bg-customGray font-body font-bold text-gray-500"
                 style={{ gridTemplateRows: "auto auto" }}
             >
                 <div
-                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listViewLgColumnWidths} font-base text-sm`}
+                    className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listViewLgColumnWidths} font-body text-sm`}
                 >
                     <div
                         id="index"
