@@ -17,10 +17,7 @@ export function TrackRowMd({
 }) {
     return (
         <div className="mx-auto mb-2 max-w-[1024px]">
-            <div
-                className="grid w-full gap-0 bg-customGray font-body font-bold text-gray-500"
-                style={{ gridTemplateRows: "auto auto" }}
-            >
+            <div className="grid-template-rows-auto grid w-full gap-0 bg-customGray font-body font-bold text-gray-500">
                 <div
                     className={`grid h-[72px] w-full gap-0 whitespace-nowrap ${listViewLgColumnWidths} font-body text-sm`}
                 >

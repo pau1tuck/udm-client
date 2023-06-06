@@ -30,7 +30,7 @@ export default function RootLayout({
             <html lang="en">
                 <body className={inter.className}>
                     <AudioWrapper>
-                        <div className="bg-custom min-h-screen font-display">
+                        <div className="bg-custom min-h-screen">
                             <nav>
                                 <Navbar />
                             </nav>
@@ -38,7 +38,6 @@ export default function RootLayout({
                                 <header className="">
                                     <Header />
                                 </header>
-
                                 <main className="">{children}</main>
                             </div>
                         </div>

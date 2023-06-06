@@ -36,6 +36,19 @@ module.exports = {
             "warn",
             { argsIgnorePattern: "^_" },
         ],
+        "tailwindcss/classnames-order": [0],
+        "tailwindcss/no-custom-classname": [
+            "warn",
+            {
+                whitelist: [
+                    "font-heading",
+                    "font-body",
+                    "font-display",
+                    "font-cursive",
+                    "bg-customGray",
+                ],
+            },
+        ],
         "react/function-component-definition": [0],
         "react/require-default-props": [0],
         "react/boolean-prop-naming": [0],
