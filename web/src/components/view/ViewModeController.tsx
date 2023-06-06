@@ -1,12 +1,12 @@
 import { TagLine } from "../header/TagLine";
 import { ViewModeButton } from "./ViewModeButton";
 
-export function ViewModeController(props: { grid: boolean }) {
+export function ViewModeController({ grid }: { grid: boolean }) {
     const gridView = (
         <>
             <div className="flex justify-between">
                 <div className="hidden font-cursive text-tertiary lg:ml-[90px] lg:flex">
-                    <TagLine key={props.grid.toString()} />
+                    <TagLine key={grid.toString()} />
                 </div>
             </div>
             <div className="text-4xl text-gray-500 lg:mr-[90px]">
@@ -18,7 +18,7 @@ export function ViewModeController(props: { grid: boolean }) {
         <>
             <div className="flex justify-between">
                 <div className="hidden font-cursive text-tertiary lg:ml-[15px] lg:flex">
-                    <TagLine key={props.grid.toString()} />
+                    <TagLine key={grid.toString()} />
                 </div>
             </div>
             <div className="text-4xl text-gray-500 lg:mr-[25px]">
@@ -30,7 +30,7 @@ export function ViewModeController(props: { grid: boolean }) {
     return (
         <div className="mb-5 flex flex-col">
             <div className="flex items-center justify-between">
-                {props.grid ? gridView : listView}
+                {grid ? gridView : listView}
             </div>
         </div>
     );
