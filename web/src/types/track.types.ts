@@ -24,7 +24,7 @@ export type ITracks = {
 
 export interface ITrackData {
     index?: number;
-    trackId?: string | "";
+    trackId?: string;
     artist?: string;
     title?: string;
     version?: string;
