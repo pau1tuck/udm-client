@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { FaList } from "react-icons/fa";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 
-export function ViewModeButton() {
+export const ViewModeButton = () => {
     const state = useContext(GlobalStateContext);
     const dispatch = useContext(GlobalDispatchContext);
 
@@ -43,4 +43,4 @@ export function ViewModeButton() {
             </button>
         </div>
     );
-}
+};

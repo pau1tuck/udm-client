@@ -1,6 +1,6 @@
 export const Navbar: React.FC = () => {
     return (
-        <div className="mr-4 flex justify-end p-4 font-body text-base">
+        <div className="mr-4 flex justify-end p-4 font-display text-base">
             <button
                 type="button"
                 className="mr-2 inline-block px-4 py-2 text-gray-200 hover:text-white"

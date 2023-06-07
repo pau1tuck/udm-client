@@ -4,13 +4,7 @@ import { TrackTitle } from "@/components/track/TrackTitle";
 import { TrackVersion } from "@/components/track/TrackVersion";
 import { ITrackData } from "@/types/track.types";
 
-export function TrackBoxData({
-    track,
-    index,
-}: {
-    track: ITrackData;
-    index: number;
-}) {
+export const TrackBoxData: React.FC<{ track: ITrackData }> = ({ track }) => {
     return (
         <div className="mt-5 text-center font-cursive text-white">
             <div className="mt-2 rounded-md">
@@ -29,4 +23,4 @@ export function TrackBoxData({
             </div>
         </div>
     );
-}
+};

@@ -1,12 +1,12 @@
 import { TagLine } from "../header/TagLine";
 import { ViewModeButton } from "./ViewModeButton";
 
-export function ViewModeController({ grid }: { grid: boolean }) {
+export const ViewModeController: React.FC<{ grid: boolean }> = ({ grid }) => {
     const gridView = (
         <>
             <div className="flex justify-between">
                 <div className="hidden font-cursive text-tertiary lg:ml-[90px] lg:flex">
-                    <TagLine key={grid.toString()} />
+                    <TagLine />
                 </div>
             </div>
             <div className="text-4xl text-gray-500 lg:mr-[90px]">
@@ -18,7 +18,7 @@ export function ViewModeController({ grid }: { grid: boolean }) {
         <>
             <div className="flex justify-between">
                 <div className="hidden font-cursive text-tertiary lg:ml-[15px] lg:flex">
-                    <TagLine key={grid.toString()} />
+                    <TagLine />
                 </div>
             </div>
             <div className="text-4xl text-gray-500 lg:mr-[25px]">
@@ -34,4 +34,4 @@ export function ViewModeController({ grid }: { grid: boolean }) {
             </div>
         </div>
     );
-}
+};

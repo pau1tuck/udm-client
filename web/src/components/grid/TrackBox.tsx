@@ -3,13 +3,9 @@ import { useTrackClickHandler } from "@/utils/use-track-click-handler";
 import { TrackBoxData } from "./TrackBoxData";
 import { TrackBoxImage } from "./TrackBoxImage";
 
-export function TrackBox({
-    track,
-    index,
-}: {
+export const TrackBox: React.FC<{
     track: ITrackData;
-    index: number;
-}) {
+}> = ({ track }) => {
     const handleTrackClick = useTrackClickHandler();
 
     return (
@@ -19,8 +15,8 @@ export function TrackBox({
                 className="m-1 mx-3 mb-10 flex h-72 w-64 cursor-pointer flex-col items-center justify-start rounded-md bg-customGray"
             >
                 <TrackBoxImage trackId={track.trackId} />
-                <TrackBoxData track={track} index={index} />
+                <TrackBoxData track={track} />
             </div>
         </div>
     );
-}
+};

@@ -19,7 +19,7 @@ export type ITrackProps = {
 };
 
 export type ITracks = {
-    tracks: ITrack[];
+    tracks: Array<ITrack>;
 };
 
 export interface ITrackData {

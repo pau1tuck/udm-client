@@ -49,6 +49,7 @@ module.exports = {
                     "text-secondary",
                     "text-tertiary",
                     "bg-customGray",
+                    "animate__bounceIn",
                 ],
             },
         ],
