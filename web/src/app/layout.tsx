@@ -1,5 +1,5 @@
 import { Header } from "@/components/header/Header";
-import { Navbar } from "@/components/navbar/Navbar";
+import { Navbar } from "@/components/navbar/NavBar";
 import { AudioWrapper } from "@/components/player/AudioWrapper";
 import GlobalStateProvider from "@/config/global-state";
 import "@fontsource/architects-daughter/400.css";

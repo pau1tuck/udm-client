@@ -1,5 +1,5 @@
 udm-client-next:
-    312205497(0O....31.22.054.97)
+    312205497(0O....31.220.54.97)
     ListView:
         ✔ Create lg ListView header @done (29/05/2023, 22:18:18)
         ✔ Create md ListView @done (31/05/2023, 20:10:07)
@@ -19,10 +19,10 @@ udm-client-next:
             ✔ Build udm-client-next with WebPack @done (05/06/2023, 06:42:00)
             ✔ Set up and configure Uncomplicated Firewall (ufw) for port 3001 @done (05/06/2023, 09:49:39)
             ✔ Configure Nginx to reroute application @done (05/06/2023, 09:56:04)
-            ☐ Temporarily run pnpm dev on port 3001
+            ☐ pnpm build 
             ☐ Point udm.pau1tuck.com subdomain to port 3001 on Hostinger
-            ☐ Initialise udm-client-next on port 3001 with pm2
-            ☐ Install __ firewall on server
+            ☐ Initialise udm-client on port 3001 with pm2
+            ☐ Install ufw firewall on server
             ☐ Close all ports except Nginx/3001
         Create ListView headers
             ☐ lg header
