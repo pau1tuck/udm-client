@@ -1,7 +1,7 @@
 import { Header } from "@/components/header/Header";
 import { Navbar } from "@/components/navbar/NavBar";
 import { AudioWrapper } from "@/components/player/AudioWrapper";
-import GlobalStateProvider from "@/config/global-state";
+import { GlobalStateProvider } from "@/config/global-state";
 import "@fontsource/architects-daughter/400.css";
 import "@fontsource/lato/400.css";
 import "@fontsource/montserrat/400.css";

@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode, createContext, useContext, useReducer, Dispatch } from "react";
 import { ITrackData } from "@/types/track.types";
 
