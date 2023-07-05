@@ -31,7 +31,7 @@ export default function RootLayout({
                 <body className={inter.className}>
                     <AudioWrapper>
                         <div className="bg-custom min-h-screen">
-                            <nav>
+                            <nav className="hidden">
                                 <Navbar />
                             </nav>
                             <div className="mx-auto max-w-screen-xl px-4">

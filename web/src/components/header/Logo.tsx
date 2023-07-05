@@ -8,7 +8,7 @@ export function Logo() {
                 alt="UDM"
                 width={250}
                 height={250}
-                className="mr-2"
+                className="mr-1 lg:ml-2"
             />
         </div>
     );
