@@ -1,29 +1,12 @@
 udm-client-next:
     312205497(0O....31.220.54.97)
     ListView:
-        ✔ Create lg ListView header @done (29/05/2023, 22:18:18)
-        ✔ Create md ListView @done (31/05/2023, 20:10:07)
-        ✔ Create sm ListView @done (31/05/2023, 20:25:39)
-        ✔ create xs ListView @done (31/05/2023, 20:32:38)
         ☐ Host udm-client-next on pau1tuck.com
-            ✔ Buy VPS and install Ubuntu 22 @done (31/05/2023, 20:36:45)
-            ✔ Set up an SSH key to access the VPS @done (02/06/2023, 10:42:37)
-            ✔ Install nvm and correct version of Node.js 18.0.0 @done (03/06/2023, 17:29:55)
-            ✔ Install pnpm @done (03/06/2023, 17:29:56)
-            ✔ Install Git @done (03/06/2023, 17:35:19)
-            ✔ Install and configure vsftp on pau1tuck server @done (04/06/2023, 06:40:15)
-            ✔ Configure FileZilla for FTP transfer @done (04/06/2023, 06:40:33)
-            ✔ Transfer .env using FileZilla @done (04/06/2023, 06:40:22)
-            ✔ Clone udm-client @done (04/06/2023, 06:40:25)
-            ✔ Remove interfering tsx file from root directory @done (05/06/2023, 06:41:57)
-            ✔ Build udm-client-next with WebPack @done (05/06/2023, 06:42:00)
-            ✔ Set up and configure Uncomplicated Firewall (ufw) for port 3001 @done (05/06/2023, 09:49:39)
-            ✔ Configure Nginx to reroute application @done (05/06/2023, 09:56:04)
-            ☐ pnpm build 
-            ☐ Point udm.pau1tuck.com subdomain to port 3001 on Hostinger
-            ☐ Initialise udm-client on port 3001 with pm2
-            ☐ Install ufw firewall on server
-            ☐ Close all ports except Nginx/3001
+            ✔ pnpm build @done (05/07/2023, 18:22:23)
+            ✔ Point udm.pau1tuck.com subdomain to port 3001 on Hostinger @done (05/07/2023, 18:22:21)
+            ✔ Initialise udm-client on port 3001 with pm2 @done (05/07/2023, 18:38:01)
+            ✔ Install ufw firewall on server @done (05/07/2023, 18:51:40)
+            ✔ Close all ports except Nginx/3001 @done (05/07/2023, 18:51:42)
         Create ListView headers
             ☐ lg header
             ☐ md header
